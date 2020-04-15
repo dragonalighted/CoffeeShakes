@@ -39,11 +39,14 @@ namespace CoffeeShakes
             this.lblZen = new System.Windows.Forms.Label();
             this.btnJitter = new System.Windows.Forms.Button();
             this.lblNextJitter = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             // 
             // cbEnable
             // 
+            this.cbEnable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbEnable.AutoSize = true;
-            this.cbEnable.Location = new System.Drawing.Point(220, 23);
+            this.cbEnable.Location = new System.Drawing.Point(220, 53);
             this.cbEnable.Name = "cbEnable";
             this.cbEnable.Size = new System.Drawing.Size(102, 19);
             this.cbEnable.TabIndex = 0;
@@ -56,7 +59,7 @@ namespace CoffeeShakes
             // 
             this.lblDeltaX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDeltaX.AutoSize = true;
-            this.lblDeltaX.Location = new System.Drawing.Point(220, 45);
+            this.lblDeltaX.Location = new System.Drawing.Point(220, 75);
             this.lblDeltaX.Name = "lblDeltaX";
             this.lblDeltaX.Size = new System.Drawing.Size(85, 15);
             this.lblDeltaX.TabIndex = 1;
@@ -67,7 +70,7 @@ namespace CoffeeShakes
             // 
             this.lblLastJittered.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLastJittered.Location = new System.Drawing.Point(21, 151);
+            this.lblLastJittered.Location = new System.Drawing.Point(21, 183);
             this.lblLastJittered.Name = "lblLastJittered";
             this.lblLastJittered.Size = new System.Drawing.Size(328, 15);
             this.lblLastJittered.TabIndex = 1;
@@ -78,7 +81,7 @@ namespace CoffeeShakes
             // 
             this.lblJitterPause.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblJitterPause.AutoSize = true;
-            this.lblJitterPause.Location = new System.Drawing.Point(220, 69);
+            this.lblJitterPause.Location = new System.Drawing.Point(220, 99);
             this.lblJitterPause.Name = "lblJitterPause";
             this.lblJitterPause.Size = new System.Drawing.Size(72, 15);
             this.lblJitterPause.TabIndex = 1;
@@ -90,7 +93,7 @@ namespace CoffeeShakes
             // 
             this.lblZen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblZen.AutoSize = true;
-            this.lblZen.Location = new System.Drawing.Point(220, 99);
+            this.lblZen.Location = new System.Drawing.Point(220, 129);
             this.lblZen.Name = "lblZen";
             this.lblZen.Size = new System.Drawing.Size(37, 15);
             this.lblZen.TabIndex = 2;
@@ -104,7 +107,7 @@ namespace CoffeeShakes
             this.btnJitter.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnJitter.Location = new System.Drawing.Point(9, 7);
             this.btnJitter.Name = "btnJitter";
-            this.btnJitter.Size = new System.Drawing.Size(205, 144);
+            this.btnJitter.Size = new System.Drawing.Size(205, 176);
             this.btnJitter.TabIndex = 3;
             this.btnJitter.UseVisualStyleBackColor = false;
             this.btnJitter.Click += new System.EventHandler(this.btnJitter_Click);
@@ -113,16 +116,30 @@ namespace CoffeeShakes
             // 
             this.lblNextJitter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNextJitter.Location = new System.Drawing.Point(21, 170);
+            this.lblNextJitter.Location = new System.Drawing.Point(21, 202);
             this.lblNextJitter.Name = "lblNextJitter";
             this.lblNextJitter.Size = new System.Drawing.Size(328, 15);
             this.lblNextJitter.TabIndex = 1;
             this.lblNextJitter.Tag = "Next Jittered: ";
             this.lblNextJitter.Text = "Next Jittered: ";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Location = new System.Drawing.Point(334, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            // 
             // MainForm
             // 
-            this.ClientSize = new System.Drawing.Size(364, 192);
+            this.ClientSize = new System.Drawing.Size(364, 224);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnJitter);
             this.Controls.Add(this.lblZen);
             this.Controls.Add(this.lblDeltaX);
@@ -137,6 +154,7 @@ namespace CoffeeShakes
             this.Text = "Coffee Shakes: Lets get the Jitters";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 
         }
 
@@ -149,6 +167,7 @@ namespace CoffeeShakes
         private System.Windows.Forms.Label lblZen;
         private System.Windows.Forms.Button btnJitter;
         private System.Windows.Forms.Label lblNextJitter;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

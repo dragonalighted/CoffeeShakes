@@ -47,8 +47,8 @@ namespace CoffeeShakes
         
         private bool DoJitter;
 
-        public Vector3 InitDeltaX = new Vector3(20, 0, 4);
-        public Vector3 InitDeltaY = new Vector3(20, 0, 4);
+        public Vector3 InitDeltaX = new Vector3(20, 1, 4);
+        public Vector3 InitDeltaY = new Vector3(20, 1, 4);
         
         public int DeltaX = 10;
         public int DeltaY = 10;

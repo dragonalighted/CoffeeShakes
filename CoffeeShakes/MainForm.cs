@@ -45,7 +45,6 @@ namespace CoffeeShakes
             notificationIcon.Dispose();
 
             audioCue.Dispose();
-            
         }
         private void SetupNotificationIcon()
         {
@@ -53,6 +52,9 @@ namespace CoffeeShakes
             notificationIcon.Icon = Resources.CoffeeCup;
             notificationIcon.Visible = true;
             notificationIcon.DoubleClick += NotificationIcon_DoubleClick;
+
+            pictureBox1.Image = Resources.gear50;
+
 
             mnuJitter = new MenuItem("Jitter", (sender, e) => { btnJitter_Click(btnJitter, EventArgs.Empty); });
             mnuLastJitter = new MenuItem("Last Jittered: -- Never" , (sender, e) => jitterBug.Poke());
@@ -78,6 +80,7 @@ namespace CoffeeShakes
         private void NotificationIcon_DoubleClick(object sender, EventArgs e)
         {
             this.Activate();
+            this.WindowState = FormWindowState.Normal;
         }
 
         private void SystemEvents_SessionSwitch(object sender, SessionSwitchEventArgs e)
@@ -267,6 +270,39 @@ namespace CoffeeShakes
             cbEnable.Checked = !cbEnable.Checked;
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            using (var settings = new SettingsForm())
+            {
+                settings.WindowState = FormWindowState.Normal;
+                var result = settings.ShowDialog(this);
+                if (result == DialogResult.OK)
+                {
+                    int i = 0;
+                    i++;
+                }
+
+            }
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            if (sender is PictureBox pb)
+            {
+                pb.BorderStyle = BorderStyle.FixedSingle;
+                 
+            }
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            if (sender is PictureBox pb)
+            {
+                pb.BorderStyle = BorderStyle.None;
+
+            }
+
+        }
     }
 
 

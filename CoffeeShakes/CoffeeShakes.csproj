@@ -34,6 +34,9 @@
     <None Update="Resources\CoffeeCup.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\Icons\gear50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\Icons\coffee-icon.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
